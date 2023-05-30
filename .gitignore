@@ -8,3 +8,4 @@ eric/*
 **.idea
 **.tgz
 venv/
+**/chk-black/*

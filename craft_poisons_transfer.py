@@ -32,8 +32,8 @@ if __name__ == '__main__':
     # The substitute models and the victim models
     parser.add_argument('--end2end', default=False, choices=[True, False], type=bool,
                         help="Whether to consider an end-to-end victim")
-    parser.add_argument('--substitute-nets', default=['ResNet50', 'ResNet18'], nargs="+", required=False)
-    parser.add_argument('--target-net', default=["DenseNet121"], nargs="+", type=str)
+    parser.add_argument('--substitute-nets', default=['ResNet50'], nargs="+", required=False)
+    parser.add_argument('--target-net', default=["ResNet50"], nargs="+", type=str)
     parser.add_argument('--model-resume-path', default='model-chks', type=str,
                         help="Path to the pre-trained models")
     parser.add_argument('--net-repeat', default=1, type=int)
@@ -47,9 +47,9 @@ if __name__ == '__main__':
     parser.add_argument('--target-label', default=6, type=int)
     parser.add_argument('--target-index', default=1, type=int,
                         help='index of the target sample')
-    parser.add_argument('--poison-label', '-plabel', default=8, type=int,
+    parser.add_argument('--poison-label', '-plabel', default=5, type=int,
                         help='label of the poisons, or the target label we want to classify into')
-    parser.add_argument('--poison-num', default=5, type=int,
+    parser.add_argument('--poison-num', default=7, type=int,
                         help='number of poisons')
 
     parser.add_argument('--poison-lr', '-plr', default=4e-2, type=float,
